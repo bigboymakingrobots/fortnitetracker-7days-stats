@@ -1,6 +1,12 @@
 # fortnitetracker-7days-stats
 node module for obtaining last 7 days stats from fortnitetracker.com
 
+## Installation
+
+```
+npm install fortnitetracker-7days-stats --save
+```
+
 ## Example usage
 
 ```javascript

@@ -7,9 +7,14 @@ exports.getStats = (username, platform, callback) => {
 
     request(url, (error, response, body) => {
         // error
-        if(!response || response.statusCode != 200){
-            var ret = { status: "player not found" };
-            callback(ret);
+        if(!response){
+            callback(new Error("No response"), null);
+            return;
+        }
+
+        // player not found
+        if(response.statusCode != 200){
+            callback(new Error("Player not found"), null);
             return;
         }
 
@@ -22,7 +27,6 @@ exports.getStats = (username, platform, callback) => {
 
         // obtain each value and put in dict
         var ret = {
-            status: "ok",
             score: json[0].value,
             kills: json[1].value,
             wins: json[2].value,
@@ -35,6 +39,6 @@ exports.getStats = (username, platform, callback) => {
         }
 
         // callback function with result
-        callback(ret);
+        callback(null, ret);
     });
 }

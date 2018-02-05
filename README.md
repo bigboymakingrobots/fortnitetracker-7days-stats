@@ -1,5 +1,5 @@
 # fortnitetracker-7days-stats
-node module for obtaining last 7 days stats from fortnitetracker.com
+Node module for obtaining the last 7 days stats from fortnitetracker.com
 
 ## Installation
 
@@ -10,17 +10,21 @@ npm install fortnitetracker-7days-stats --save
 ## Example usage
 
 ```javascript
-const fortnite = require('fortnitetracker-7days-stats');
+const fnt = require('fortnitetracker-7days-stats');
 
-fortnite.getStats("MonsterMannen", "pc", (result) => {
-    console.log("Wins in the last 7 days: " + result.wins);
+fnt.getStats("MonsterMannen", "pc", (err, result) => {
+    if(err){
+        console.log(err.message);   // player not found
+    }else{
+        console.log("Wins in the last 7 days: " + result.wins);
+    }
 });
+
 ```
 
-Result have the following values
+`result` has the following fields
 
 ```javascript
-result.status  // 'ok' if no errors
 result.score
 result.kills
 result.wins

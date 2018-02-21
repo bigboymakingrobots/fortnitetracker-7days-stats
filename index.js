@@ -3,9 +3,15 @@ const request = require('request');
 exports.getStats = (username, platform, callback) => {
 
     var url = "https://fortnitetracker.com/profile/";
-    url += platform + "/" + username;
+    url += platform + "/" + encodeURIComponent(username);
 
     request(url, (error, response, body) => {
+        // check platform
+        if(platform != "pc" && platform != "psn" && platform != "xb1"){
+            callback(new Error("Platform must be one of: 'pc', 'psn', 'xb1'"), null);
+            return;
+        }
+
         // error
         if(!response){
             callback(new Error("No response"), null);

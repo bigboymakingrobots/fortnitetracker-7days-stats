@@ -9,6 +9,8 @@ npm install fortnitetracker-7days-stats --save
 
 ## Example usage
 
+Available platforms: `pc`, `psn`, `xb1`
+
 ```javascript
 const fnt = require('fortnitetracker-7days-stats');
 

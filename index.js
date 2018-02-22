@@ -37,11 +37,11 @@ exports.getStats = (username, platform, callback) => {
             kills: json[1].value,
             wins: json[2].value,
             matches: json[3].value,
-            top_3_5_10: json[5].value,
-            top_6_12_25: json[6].value,
-            kd: json[7].displayValue,
-            wr: json[8].value,
-            minutesPlayed: json[9].value
+            top_3_5_10: json[4].value,
+            top_6_12_25: json[5].value,
+            kd: json[6].displayValue,
+            wr: json[7].value,
+            minutesPlayed: json[8].value
         }
 
         // callback function with result

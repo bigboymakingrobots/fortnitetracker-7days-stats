@@ -2,7 +2,7 @@ const fnt = require('./index.js');
 
 fnt.getStats("MonsterMannen", "pc", (err, result) => {
     if(err){
-        console.log(err.message);   // player not found
+        console.log(err.message);
     }else{
         console.log("score: " + result.score);
         console.log("kills: " + result.kills);

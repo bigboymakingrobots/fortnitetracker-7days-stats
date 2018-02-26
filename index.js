@@ -12,7 +12,7 @@ exports.getStats = (username, platform, callback) => {
             return;
         }
 
-        // error
+        // no response
         if(!response){
             callback(new Error("No response"), null);
             return;
@@ -21,6 +21,12 @@ exports.getStats = (username, platform, callback) => {
         // player not found
         if(response.statusCode != 200){
             callback(new Error("Player not found"), null);
+            return;
+        }
+
+        // random error
+        if(error){
+            callback(new Error("Some error occured :("), null);
             return;
         }
 

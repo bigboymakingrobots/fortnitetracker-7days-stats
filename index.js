@@ -44,7 +44,7 @@ exports.getStats = (username, platform, callback) => {
 
         // obtain each value and put in dict
         var ret = {
-            name: jsonInfo.Nickname,
+            accountName: jsonInfo.Nickname,
             skinUrl: jsonInfo.EmblemUrl,
             score: jsonStats[0].value,
             kills: jsonStats[1].value,

@@ -30,24 +30,31 @@ exports.getStats = (username, platform, callback) => {
             return;
         }
 
-        // get relevant json text from html file
+        // get text for last 7 days stats
         var last7 = body.substring(body.indexOf("var Last7") + 12);
         last7 = last7.substring(0, last7.indexOf("</script>") - 1);
 
-        // parse to json object
-        var json = JSON.parse(last7);
+        // get text for account info
+        var accountInfo = body.substring(body.indexOf("var accountInfo") + 18);
+        accountInfo = accountInfo.substring(0, accountInfo.indexOf(";</script>"));
+
+        // parse to json objects
+        var jsonStats = JSON.parse(last7);
+        var jsonInfo = JSON.parse(accountInfo);
 
         // obtain each value and put in dict
         var ret = {
-            score: json[0].value,
-            kills: json[1].value,
-            wins: json[2].value,
-            matches: json[3].value,
-            top_3_5_10: json[4].value,
-            top_6_12_25: json[5].value,
-            kd: json[6].displayValue,
-            wr: json[7].value,
-            minutesPlayed: json[8].value
+            name: jsonInfo.Nickname,
+            skinUrl: jsonInfo.EmblemUrl,
+            score: jsonStats[0].value,
+            kills: jsonStats[1].value,
+            wins: jsonStats[2].value,
+            matches: jsonStats[3].value,
+            top_3_5_10: jsonStats[4].value,
+            top_6_12_25: jsonStats[5].value,
+            kd: jsonStats[6].displayValue,
+            wr: jsonStats[7].value,
+            minutesPlayed: jsonStats[8].value
         }
 
         // callback function with result

@@ -27,6 +27,8 @@ fnt.getStats("MonsterMannen", "pc", (err, result) => {
 `result` has the following fields
 
 ```javascript
+result.name
+result.skinUrl
 result.score
 result.kills
 result.wins

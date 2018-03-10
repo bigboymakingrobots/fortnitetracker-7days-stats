@@ -4,6 +4,8 @@ fnt.getStats("MonsterMannen", "pc", (err, result) => {
     if(err){
         console.log(err.message);
     }else{
+        console.log("name: " + result.name);
+        console.log("skin: " + result.skinUrl);
         console.log("score: " + result.score);
         console.log("kills: " + result.kills);
         console.log("wins: " + result.wins);

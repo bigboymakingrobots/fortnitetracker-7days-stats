@@ -1,6 +1,6 @@
 {
   "name": "fortnitetracker-7days-stats",
-  "version": "2.1.1",
+  "version": "2.1.2",
   "description": "get stats for the last 7 days from fortnitetracker.com",
   "main": "index.js",
   "scripts": {

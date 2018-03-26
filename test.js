@@ -1,6 +1,6 @@
 const fnt = require('./index.js');
 
-fnt.getStats("MonsterMannen", "pc", (err, result) => {
+fnt.getStatsSquad("DNL._.", "pc", (err, result) => {
     if(err){
         console.log(err.message);
     }else{

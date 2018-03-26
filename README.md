@@ -43,8 +43,7 @@ result.minutesPlayed
 
 ## Specific gamemode stats
 
-Use these methods to get the last 7 days stats only for a specific queue type.  
-Same args as for `getStats()`.
+Use these methods to get the last 7 days stats only for a specific queue type.
 
 `getStatsSolo()`  
 `getStatsDuo()`  

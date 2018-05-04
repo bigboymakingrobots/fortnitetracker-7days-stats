@@ -19,6 +19,6 @@
   "author": "MonsterMannen <viktorsvensson94@gmail.com>",
   "license": "ISC",
   "dependencies": {
-    "request": "^2.83.0"
+    "request": "^2.85.0"
   }
 }

@@ -3,7 +3,7 @@ const request = require('request');
 exports.getStats = (username, platform, callback) => {
 
     var url = "https://fortnitetracker.com/profile/";
-    url += platform + "/" + encodeURIComponent(username);
+    url += platform + "/" + encodeURIComponent(username) + "?old=1";
 
     request(url, (error, response, body) => {
         // check platform
@@ -65,7 +65,7 @@ exports.getStats = (username, platform, callback) => {
 exports.getStatsSolo = (username, platform, callback) => {
 
     var url = "https://fortnitetracker.com/profile/";
-    url += platform + "/" + encodeURIComponent(username) + "?p=p2";
+    url += platform + "/" + encodeURIComponent(username) + "?p=p2&old=1";
 
     request(url, (error, response, body) => {
         // check platform
@@ -127,7 +127,7 @@ exports.getStatsSolo = (username, platform, callback) => {
 exports.getStatsDuo = (username, platform, callback) => {
 
     var url = "https://fortnitetracker.com/profile/";
-    url += platform + "/" + encodeURIComponent(username) + "?p=p10";
+    url += platform + "/" + encodeURIComponent(username) + "?p=p10&old=1";
 
     request(url, (error, response, body) => {
         // check platform
@@ -189,7 +189,7 @@ exports.getStatsDuo = (username, platform, callback) => {
 exports.getStatsSquad = (username, platform, callback) => {
 
     var url = "https://fortnitetracker.com/profile/";
-    url += platform + "/" + encodeURIComponent(username) + "?p=p9";
+    url += platform + "/" + encodeURIComponent(username) + "?p=p9&old=1";
 
     request(url, (error, response, body) => {
         // check platform

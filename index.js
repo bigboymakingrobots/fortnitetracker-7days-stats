@@ -3,7 +3,7 @@ const request = require('request');
 exports.getStats = (username, platform, callback) => {
 
     var url = "https://fortnitetracker.com/profile/";
-    url += platform + "/" + encodeURIComponent(username);
+    url += platform + "/" + encodeURIComponent(username) + "?old=1"; //i guess
 
     request(url, (error, response, body) => {
         // check platform

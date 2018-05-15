@@ -40,7 +40,6 @@ exports.getStats = (username, platform, callback) => {
 
         // parse to json objects
         var jsonStats = JSON.parse(last7);
-        console.log(accountInfo);
         var jsonInfo = JSON.parse(accountInfo);
 
         // obtain each value and put in dict

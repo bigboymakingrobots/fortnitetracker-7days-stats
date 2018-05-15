@@ -1,5 +1,7 @@
 # fortnitetracker-7days-stats
-Node module for obtaining the last 7 days stats from fortnitetracker.com
+Node module for obtaining the last 7 days stats from fortnitetracker.com  
+
+Working again with the new fortnitetracker site :>
 
 ## Installation
 
@@ -43,7 +45,9 @@ result.minutesPlayed
 
 ## Specific gamemode stats
 
-Use these methods to get the last 7 days stats only for a specific queue type.
+~~Use these methods to get the last 7 days stats only for a specific queue type.~~  
+
+// temp removed  
 
 `getStatsSolo()`  
 `getStatsDuo()`  

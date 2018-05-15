@@ -1,7 +1,7 @@
 # fortnitetracker-7days-stats
 Node module for obtaining the last 7 days stats from fortnitetracker.com  
 
-Working again with the new fortnitetracker site :>
+**Working again with the new fortnitetracker site :>**
 
 ## Installation
 
